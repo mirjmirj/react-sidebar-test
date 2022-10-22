@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import * as Icons from './assets/Icons';
+import avatar from './assets/avatar.png';
 import './Sidebar.scss';
 
 function Sidebar() {
@@ -24,6 +25,7 @@ function Sidebar() {
         title={isShrinkView ? "Expand" : "Shrink"}
         onClick={handleSidebarView}
       >
+        <Icons.LeftArrow />
       </button>
       <div className="sidebar-wrapper">
         <div className="sidebar-themeContainer">
@@ -38,9 +40,11 @@ function Sidebar() {
               onChange={handleThemeChange}
             />
             <div className="sidebar-themeType light">
+              <Icons.Light />
               <span className="sidebar-themeInputText">Light</span>
             </div>
             <div className="sidebar-themeType dark">
+              <Icons.Dark />
               <span className="sidebar-themeInputText">Dark</span>
             </div>
           </label>
@@ -48,33 +52,38 @@ function Sidebar() {
         <ul className="sidebar-list">
           <li className="sidebar-listItem active">
             <a>
+              <Icons.Dashboard />
               <span className="sidebar-listItemText">Dashboard</span>
             </a>
           </li>
           <li className="sidebar-listItem">
             <a>
+              <Icons.Inbox />
               <span className="sidebar-listItemText">Inbox</span>
             </a>
           </li>
           <li className="sidebar-listItem">
             <a>
+              <Icons.Calendar />
               <span className="sidebar-listItemText">Calendar</span>
             </a>
           </li>
           <li className="sidebar-listItem">
             <a>
+              <Icons.Activity />
               <span className="sidebar-listItemText">Activity</span>
             </a>
           </li>
           <li className="sidebar-listItem">
             <a>
+              <Icons.Settings />
               <span className="sidebar-listItemText">Settings</span>
             </a>
           </li>
         </ul>
         <div className="sidebar-profileSection">
           <img
-            src=""
+            src={avatar}
             width="40"
             height="40"
             alt="Mitch Thompson"
